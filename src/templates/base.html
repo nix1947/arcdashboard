@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  {% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  {% endblock meta %}
+    <title>{% block title %}{% endblock title %} | Dashboard</title>
+  {% block css %}
+    {% include 'partials/_css.html' %}
+  {% endblock css %}
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- Navigation bar -->
+    {% block navbar %}
+      {% include 'partials/_sidebar.html' %}
+    {% endblock navbar %}
+
+    <!-- Main content -->
+    <div id="page-wrapper">
+      {% block content %}Hello world {% endblock content %}
+    </div>
+  </div>  <!-- /#page-wrapper -->
+
+  {% block scripts %}
+    {% include 'partials/_scripts.html' %}
+  {% endblock scripts %}
+</body>
+</html>
