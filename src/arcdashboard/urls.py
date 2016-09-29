@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from dashboard.views import dashboard
+from dashboard.views import dashboard, login, logout
 
 urlpatterns = [
+    # Login page
+    url(r'^$', login, name="login"),
     # Serve the dashboard
-    url(r'^dashboard/', dashboard, name="dashboard"),
+    url(r'^dashboard/$', dashboard, name="dashboard"),
+    # Administrative login
     url(r'^admin/', admin.site.urls),
+    # Logout url
+    url(r'^logout$', logout, name="logout")
 ]

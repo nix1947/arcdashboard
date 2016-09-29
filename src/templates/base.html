@@ -17,16 +17,9 @@
 
 <body>
   <div id="wrapper">
-    <!-- Navigation bar -->
-    {% block navbar %}
-      {% include 'partials/_sidebar.html' %}
-    {% endblock navbar %}
-
-    <!-- Main content -->
-    <div id="page-wrapper">
-      {% block content %}Hello world {% endblock content %}
-    </div>
+    {% block content %}{% endblock content %}
   </div>  <!-- /#page-wrapper -->
+
 
   {% block scripts %}
     {% include 'partials/_scripts.html' %}
